@@ -16,7 +16,7 @@ assembly language as argument and generate a champion that will be understood
 by the virtual machine.<br>
 • <b>It will run like that:</b><br>
 
-      ./asm mychampion.s<br>
+      ./asm mychampion.s
    
 • It will read the assembly’s code processed from the file .s given as argument, and
 write the resulting bytecode in a file named same as the argument by replacing the
@@ -65,7 +65,7 @@ output.<br>
 it.<br>
 • <b>The virtual machine run that:</b><br>
 
-      ./corewar [-dump nbr_cycles] [[-n number] champion1.cor] ...<br>
+      ./corewar [-dump nbr_cycles] [[-n number] champion1.cor] ...
       
 • -dump nbr_cycles<br>
 at the end of nbr_cycles of executions, dump the memory on the standard output
