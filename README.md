@@ -50,4 +50,25 @@ effect!)<br>
 • If during one of those checkup we notice that there has been at least one NBR_LIVE
 execution of live since the latest check up, we will decrease CYCLE_TO_DIE of
 CYCLE_DELTA units.<br>
-• The game is over when all processes are dead.
+• The game is over when all processes are dead.<br>
+• The winner is the last player to be reported alive. The machine will then show
+“Player X (champion_name) won”, where X is the player’s number and champion_name is its name.
+For example: “Player 2 (rainbowdash) won”.<br>
+• For each valid execution of the live instruction, the machine must display:
+“A process shows that player X (champion_name) is alive”.<br>
+• In any case, memory is circular and of MEM_SIZE octets.<br>
+• In case of an error, you must display a relevant error message on the standard error
+output.<br>
+• If CYCLE_TO_DIE wasn’t decreased since MAX_CHECKS checkups, decrease
+it.<br>
+• The virtual machine should be executed like that:
+      ./corewar [-dump nbr_cycles] [[-n number] champion1.cor] ...<br>
+• -dump nbr_cycles<br>
+at the end of nbr_cycles of executions, dump the memory on the standard output
+and quit the game. The memory must be dumped in the hexadecimal format with
+32 octets per line.<br>
+• -n number<br>
+sets the number of the next player. If non-existent, the player will have the next
+available number in the order of the parameters. The last player will have the first
+process in the order of execution.<br>
+• The champions cannot go over CHAMP_MAX_SIZE, otherwise it is an error.
